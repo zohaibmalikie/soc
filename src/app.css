@@ -1,0 +1,167 @@
+/* src/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(0, 0, 0);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a, a.transfer-button {
+  font-weight: 500;
+  color: #00FF00;
+  text-decoration: inherit;
+}
+a:hover, a.transfer-button:hover {
+  color: #e5ff00;
+}
+
+.address-container {
+  padding: 10px 15px;
+  background-color: #010101; /* Light grey background, similar to input fields */
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Responsive width */
+  box-sizing: border-box; /* So padding doesn't affect width */
+  margin-bottom: 10px; /* Spacing after the address display */
+  word-break: break-all; /* To prevent overflow by long addresses */
+}
+
+.address-input {
+  font-size: 1rem; /* Adjust the font size as needed */
+  background-color: #010101; 
+  color: #00FF00;
+  padding: 0.5rem; /* Add some padding for visual comfort */
+  border: 2px solid #00FF00; /* A subtle border similar to the amount input */
+  border-radius: 4px; /* Rounded corners like the amount input */
+  margin: 0.5rem 0; /* Some margin for spacing around the element */
+  width: 100%; /* To ensure it expands to the width of its container */
+  box-sizing: border-box; /* To ensure padding doesn't affect the overall width */
+}
+
+.transfer-button {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000; /* Default black background */
+  color: #00FF00; /* White text */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 20px; /* Adjust the value as needed */
+  border: 2px solid #00FF00;
+}
+
+.transfer-button:hover {
+  background-color: #000000; /* Darker yellow background on hover */
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.claim-item {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1a1a1a; /* Slightly lighter than black background */
+  color: #fff; /* White text */
+  padding: 12px 18px;
+  margin: 10px 0; /* Space between items */
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+  list-style: none; /* Remove default list styling */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.claim-item p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.claim-item:hover {
+  background-color: #333; /* Slightly lighter on hover */
+  transform: scale(1.02); /* Slight increase in size on hover */
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #00FF00; /* Sets the heading color to white */
+  text-align: center; /* Centers the heading text */
+  margin-bottom: 3rem; /* Adds space below the heading */
+  font-size: 40px; /* Sets the font size to 32 pixels */
+}
+
+h2 {
+  color: #00FF00; /* Sets the heading color to white */
+  text-align: center; /* Centers the heading text */
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #00FF00;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #000000;
+  }
+  a:hover, a.transfer-button:hover {
+    color: #ffffff;
+  }
+  button {
+    background-color: #000000;
+  }
+}
+

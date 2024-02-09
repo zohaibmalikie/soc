@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es2020",
+      "module": "es2020",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+        "$lib/*": ["src/lib/*"]
+      },
+      "allowJs": true,
+      "noEmit": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.svelte"]
+  }
+  
